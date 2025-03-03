@@ -665,7 +665,7 @@ align-items: center;
 }
 .subscription input{
     width: 70%;
-    padding: 10px;
+    padding: 9px;
     border: 1.600px rgba(118, 118, 118, 0.394) solid;
     font-family: "Inter", serif;
     font-size: 13px;
@@ -677,11 +677,12 @@ align-items: center;
 }
 .btn{
     width: 20%;
-    padding: 10px;
+    padding: 9px;
     border: 1.6px red solid;
+    border-radius: 4px;
     background-color: red;
     font-family: "Inter", serif;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 400;
     font-style: normal;
     line-height: normal;

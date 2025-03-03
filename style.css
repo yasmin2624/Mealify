@@ -1,10 +1,15 @@
 body{
     margin: 0px;
+    font-size: 16px;
+    line-height: 1.6;
     
 }
-*{
-    box-sizing: border-box;  
-}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
 *::selection{
     color: #EEEEEE;
     background-color: tomato;
@@ -16,11 +21,26 @@ ul{
     list-style: none;
 }
 .container{
-    width: 90%;
-    /* height: 100vh; */
+    width: 80%;
     margin: auto;
-    /* padding: 50px; */
+    /* margin-left: 20px; */
+   
+}  
+img {
+    width: 100%;
+    height: auto;
+  }
+  
+
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+.flex{
+    margin-top: 30px;
 }
+  
+  
 p{
     font-family: "Open Sans", sans-serif;
     font-size: 16px;
@@ -38,6 +58,7 @@ left: 0;
 z-index: 999;
 display: flex;
 box-shadow: 0px 0px 14px 0px #8584844f;
+padding: 10px;
 }
 .nav ul a{
     color:#8B8D97;
@@ -80,25 +101,31 @@ box-shadow: 0px 0px 14px 0px #8584844f;
 }
 .hero{
     background-color: #EEEEEE;
-    padding-top:150px ;
+    padding-top:80px ;
     padding-inline-end:40px ;
+    height: 95vh;
+    
 }
 .hero-section{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center; 
+    
+   
+    
 }
 .ply-icon {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     width: 50px;
-    height: 50px;
+    height: 40px;
     background-color: red;
     color: white;
     border-radius: 50%;
-    font-size: 20px;
-    margin-right: 10px;
+    font-size: 16px;
+    margin-right: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   }
   
@@ -113,27 +140,25 @@ box-shadow: 0px 0px 14px 0px #8584844f;
     background-color: #f0f0f0;
     border-radius: 30px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
+  } 
   a:hover {
     color: red;
   }
   
 .items{
     flex-basis: 40%;
-    text-align: left;
     align-items: center;
 }
 .hero h2{
     font-family: "Amatic SC", sans-serif;
-    font-weight: 700;
+    font-weight: 800;
     font-size: 65px;
-    font-style: normal;
+    
 }
 .hero img{
-    width: 100%;
-    margin-left: auto;
+    width: 90%;
     flex-grow: 3;
+    margin-top: 40px;
 }
 .hero img:hover {
     animation: plate 1s infinite;
@@ -184,7 +209,7 @@ box-shadow: 0px 0px 14px 0px #8584844f;
     font-family :"Open Sans", sans-serif;
     font-weight : 600;
     font-size: 15px;
-    margin-top: 40px;
+    /* margin-top: 40px; */
     margin-right: 35px;
 }
 
@@ -216,14 +241,19 @@ box-shadow: 0px 0px 14px 0px #8584844f;
     color: rgb(206, 18, 18);
 }
 .chefs{
-background-color: #FFFFFF                                                                                                           ;
+background-color: #FFFFFF ; 
+padding-top: 30px;                                                                              ;
 }
 .chefs-card{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
 }
 .card{
-    width:calc(100% / 3 - 30px);
+    width:calc(33.33% - 30px);
     margin: 10px;
     background-color:#FFFFFF;
     border-radius: 9px;
@@ -273,7 +303,7 @@ width: 100%;
     left: 0;
     z-index: -1;
 }
-
+     
 
 .chefs-cards .card img:before {
     content: "";
@@ -605,7 +635,13 @@ align-items: center;
     color: #FFFFFF;
     font-size: 1.5rem;
 }
+#btn:hover {
+    background-color: #ffffff;
+    color: red;
+
+}
 .subscription{
+    padding-top: 30px;
     flex-basis: 45%;
     /* margin-right: 20px; */
 }
@@ -624,10 +660,12 @@ align-items: center;
     font-style: normal;
     line-height: normal;
     color: rgb(255, 255, 255);
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 .subscription input{
     width: 70%;
-    padding: 12px;
+    padding: 10px;
     border: 1.600px rgba(118, 118, 118, 0.394) solid;
     font-family: "Inter", serif;
     font-size: 13px;
@@ -635,6 +673,7 @@ align-items: center;
     font-style: normal;
     line-height: normal;
     color: #7D7D7D;
+    margin-bottom: 20px;
 }
 .btn{
     width: 20%;
@@ -648,6 +687,14 @@ align-items: center;
     line-height: normal;
     color: rgb(255, 255, 255);
 
+}
+.btn {
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: rgb(148, 3, 3);
+    
 }
 .quick-links a{
     font-family:"Open Sans", sans-serif;
@@ -668,15 +715,17 @@ align-items: center;
   }
 .contact-details{
     flex-basis: 25%;
+    padding-top: 25px;
 }
 .contact-details h3{
     font-family: "Inter", serif;
-    font-size: 19px;
+    font-size: 25px;
     font-weight: 700;
     font-style: normal;
     line-height: normal;
     color: rgb(255, 255, 255);
-    margin-left: 10px;
+    margin-left: 30px;
+    margin-bottom: 20px;
 }
 .contact-details a,span{
     font-family:"Open Sans", sans-serif;
